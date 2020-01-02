@@ -1,5 +1,10 @@
-function addBorder(picture: string[]): string[] {
+const addBorder = (picture: string[]): any => {
+  let wall = '*'.repeat(picture[0].length + 2);
 
-}
+  picture.unshift(wall);
+  picture.push(wall);
 
-// console.log(addBorder(["abc", "ded"]));
+  return picture;
+};
+
+console.log(addBorder(['abc', 'ded']));
